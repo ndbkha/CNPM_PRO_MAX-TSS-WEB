@@ -21,7 +21,7 @@ const CardSection = ({ title, cards, onCardClick, columns = 2 }) => {
             icon={card.icon}
             title={card.title}
             href={card.href}
-            onClick={card.onClick ? () => onCardClick(card.title) : undefined}
+            onClick={onCardClick ? () => onCardClick(card.title) : undefined}
           />
         ))}
       </div>

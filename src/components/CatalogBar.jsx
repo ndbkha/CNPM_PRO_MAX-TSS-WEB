@@ -5,9 +5,9 @@ const categories = [
   { label: "Trang chủ", href: "/" },
   { label: "Đăng ký chương trình", href: "/dang-ky" },
   { label: "Quản lý lịch hẹn", href: "/lich-hen" },
-  { label: "Tài nguyên học tập", href: "/tai-nguyen" },
   { label: "Tiến độ học tập", href: "/tien-do" },
   { label: "Buổi hỗ trợ", href: "/buoi-ho-tro" },
+  { label: "Tài nguyên học tập", href: "/tai-nguyen" },
 ];
 
 const languages = ["Vietnamese", "English"];

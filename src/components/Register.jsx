@@ -32,15 +32,16 @@ const Register = () => {
     }
 
     if (cardTitle === "GỢI Ý TUTOR/MENTOR") {
-      // Chỉ gợi ý tutor cùng khoa hoặc đã đăng ký
+      // Chỉ gợi ý tutor cùng khoa hoặc đã đăng ký và còn slot trống
       const filtered = tutorData.filter(
         (tutor) =>
-          tutor.department === userDepartment ||
-          tutorsRegistered.includes(tutor.name)
+          (tutor.department === userDepartment || tutorsRegistered.includes(tutor.name)) &&
+          tutor.slots > 0 // chỉ lấy tutor còn slot
       );
       setFilteredTutors(filtered);
       setIsTutorOpen(true);
     }
+
   };
 
   return (
