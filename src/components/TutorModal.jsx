@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { TableModal } from "../components/TableModal";
 import CalendarModal from "./CalendarModal";
-import tutorData from "../mockdata/tutorData";
 import { ChevronDownIcon } from "lucide-react";
 
 const tutorColumns = [
     { label: "STT", key: "stt", width: "60px" },
-    { label: "Họ và tên", key: "name", color: "#9c050c" },
+    { label: "Họ và tên", key: "name", color: "#9C050C" },
     {
         label: "Khoa",
         key: "department",
@@ -19,11 +18,10 @@ const tutorColumns = [
     { label: "Số buổi trống", key: "slots" },
 ];
 
-export default function TutorModal({ isOpen, onClose }) {
+export default function TutorModal({ isOpen, onClose, tutorData }) {
     const [selectedTutor, setSelectedTutor] = useState(null);
 
     const handleRowClick = (tutor) => {
-        console.log("You clicked:", tutor);
         setSelectedTutor(tutor);
     };
 
@@ -40,7 +38,7 @@ export default function TutorModal({ isOpen, onClose }) {
                     <>
                         <img src="/logo.jpg" className="w-[110px] h-[110px] mb-4" />
                         <div className="text-center font-bold text-lg">
-                            DANH SÁCH <br /> TƯ VẤN / MENTOR
+                            DANH SÁCH <br /> TUTOR / MENTOR
                         </div>
                     </>
                 }
@@ -56,3 +54,4 @@ export default function TutorModal({ isOpen, onClose }) {
         </>
     );
 }
+
