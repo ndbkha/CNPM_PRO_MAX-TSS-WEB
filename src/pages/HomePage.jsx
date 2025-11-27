@@ -6,7 +6,7 @@ import LoginModal from "../components/LoginModal";
 import Functions from "../components/Functions";
 
 function HomePage() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
