@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import CatalogBar from "../components/CatalogBar";
-import LoginModal from "../components/LoginModal";
-import Functions from "../components/Functions";
+import AppointmentFunctions from "../components/AppointmentFunctions";
 
-function HomePage() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+function AppoinmentManagement() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -17,10 +16,10 @@ function HomePage() {
     <div className="flex flex-col min-h-screen bg-gray-100">
       {/* Header */}
       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-      <CatalogBar activeCategory="/" />
+      <CatalogBar activeCategory="/lich-hen" />
 
       {/* Nội dung chính */}
-      {isLoggedIn ? <Functions /> : <LoginModal />}
+      <AppointmentFunctions />
 
       {/* Footer */}
       <Footer />
@@ -28,4 +27,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default AppoinmentManagement;
