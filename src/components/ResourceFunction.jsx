@@ -1,33 +1,25 @@
 
 import React, { useState } from "react";
 import CardSection from "./Card/CardSection";
-import { CheckSquare, Eye, MessageSquare } from "lucide-react";
+import { Download, Bookmark } from "lucide-react";
 
 const studentCards = [
   {
-    icon: CheckSquare,
-    title: "ĐÁNH GIÁ BUỔI HỖ TRỢ",
+    icon: Bookmark,      
+    title: "LẤY TÀI LIỆU",
   },
   {
-    icon: Eye,
-    title: "XEM PHẢN HỒI",
+    icon: Download,      
+    title: "TÀI LIỆU ĐÃ LƯU",
   },
 ];
 
-const tutorCards = [
-  {
-    icon: MessageSquare,
-    title: "PHẢN HỒI ĐÁNH GIÁ",
-  },
-];
-
-
-const AppointmentFunctions = () => {
+const ResourceFunction = () => {
     return (
         <main className="flex-1 px-[106px] py-7">
             <div className="flex mb-8 items-center justify-between">
                 <div className="font-playwrite font-normal text-black text-sm">
-                    Lịch của bạn.
+                    Tài nguyên của bạn.
                 </div>
             </div>
 
@@ -36,13 +28,8 @@ const AppointmentFunctions = () => {
                 cards={studentCards}
                 columns={3}
             />
-            <CardSection
-                title="TUTOR/MENTOR"
-                cards={tutorCards}
-                columns={3}
-            />
         </main>
     );
 };
 
-export default AppointmentFunctions;
+export default ResourceFunction;

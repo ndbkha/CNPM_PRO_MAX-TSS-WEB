@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import CatalogBar from "../components/CatalogBar";
-import AppointmentFunctions from "../components/AppointmentFunctions";
+import AppointmentFunctions from "../components/ScheduleFunctions";
 
 function AppoinmentManagement() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

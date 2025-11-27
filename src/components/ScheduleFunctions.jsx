@@ -1,23 +1,28 @@
-
+// src/components/Register.jsx
 import React, { useState } from "react";
 import CardSection from "./Card/CardSection";
-import { CheckSquare, Eye, MessageSquare } from "lucide-react";
 
-const studentCards = [
+import { Calendar, Trash2, Edit, PlusSquare } from "lucide-react";
+
+const sharedCards = [
   {
-    icon: CheckSquare,
-    title: "ĐÁNH GIÁ BUỔI HỖ TRỢ",
+    icon: Calendar,
+    title: "LỊCH CỦA TÔI",
   },
   {
-    icon: Eye,
-    title: "XEM PHẢN HỒI",
+    icon: Trash2,
+    title: "HỦY LỊCH",
+  },
+  {
+    icon: Edit,
+    title: "THAY ĐỔI LỊCH",
   },
 ];
 
 const tutorCards = [
   {
-    icon: MessageSquare,
-    title: "PHẢN HỒI ĐÁNH GIÁ",
+    icon: PlusSquare,
+    title: "TẠO LỊCH TRỐNG",
   },
 ];
 
@@ -32,8 +37,8 @@ const AppointmentFunctions = () => {
             </div>
 
             <CardSection
-                title="SINH VIÊN"
-                cards={studentCards}
+                title="DÙNG CHUNG"
+                cards={sharedCards}
                 columns={3}
             />
             <CardSection
