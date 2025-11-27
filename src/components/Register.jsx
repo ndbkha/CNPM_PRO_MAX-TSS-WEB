@@ -5,7 +5,7 @@ import tutorData from "../mockdata/tutorData"; // dữ liệu mock tutor
 import CardSection from "./Card/CardSection";
 import { UserCheck, Users } from "lucide-react";
 
-const tutorCards = [
+const studentCards = [
   {
     icon: UserCheck,
     title: "LỰA CHỌN TUTOR/MENTOR",
@@ -18,6 +18,8 @@ const tutorCards = [
 
 
 const Register = () => {
+  const userRole = localStorage.getItem("role"); // "student" hoặc "tutor"
+
   const [isTutorOpen, setIsTutorOpen] = useState(false);
   const [filteredTutors, setFilteredTutors] = useState([]);
 
@@ -57,8 +59,14 @@ const Register = () => {
       </div>
 
       <CardSection
-        cards={tutorCards}
-        onCardClick={handleCardClick}
+        cards={studentCards}
+        onCardClick={(title) => {
+          if (userRole !== "student") {
+            alert("Chức năng này chỉ dành cho sinh viên!");
+            return;
+          }
+          handleCardClick(title);
+        }}
         columns={3}
       />
 

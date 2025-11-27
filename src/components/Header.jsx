@@ -74,7 +74,9 @@ const Header = () => {
                 <div>
                     {!isLoggedIn ? (
                         <div className="flex items-center gap-2 bg-white rounded-lg shadow-[0px_4px_4px_#00000033] w-[280px] h-[45px] px-4">
-                            <button className="flex-1 h-full text-primary font-bold text-xs">
+                            <button className="flex-1 h-full text-primary font-bold text-xs"
+                                    onClick={() => navigate("/login-SSO")}
+                            >
                                 Đăng nhập
                             </button>
 
