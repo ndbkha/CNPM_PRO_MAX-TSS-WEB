@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import CardSection from "./Card/CardSection";
 import { CheckSquare, Eye, MessageSquare } from "lucide-react";
 
+
 const studentCards = [
     {
         icon: CheckSquare,
@@ -42,7 +43,7 @@ const AppointmentFunctions = () => {
         <main className="flex-1 px-[106px] py-7">
             <div className="flex mb-8 items-center justify-between">
                 <div className="font-playwrite font-normal text-black text-sm">
-                    Lịch của bạn.
+                    Buổi hỗ trợ của bạn.
                 </div>
             </div>
 
