@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
     "lucide-react": "^0.553.0",
     "prop-types": "^15.8.1",
     "react": "^19.2.0",
