@@ -1,10 +1,11 @@
 // TableRow.jsx
 import React from "react";
 
-export const TableRow = ({ index, data, columns, renderCell }) => {
+export const TableRow = ({ index, data, columns, onClick, renderCell }) => {
     return (
         <tr
-            className={`${
+            onClick={onClick}
+            className={`cursor-pointer ${
                 index % 2 === 0 ? "bg-[#efefef]" : "bg-[#e0dddd]"
             } hover:bg-gray-200 transition`}
         >
@@ -14,7 +15,6 @@ export const TableRow = ({ index, data, columns, renderCell }) => {
                     className="text-center font-bold text-sm p-3 border-r border-white/30"
                     style={{ color: col.color || "#132d65" }}
                 >
-                    {/* Ưu tiên renderCell từ ngoài, nếu không có → dùng cellRender */}
                     {renderCell
                         ? renderCell(col, data, index)
                         : col.cellRender

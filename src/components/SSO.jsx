@@ -24,11 +24,11 @@ const SSO = () => {
                     </div>
                     <main className="flex-1 px-5 py-5">
                         <div className="flex gap-6">
-                            <div className="w-[394px] bg-[#EEEEEE] rounded-lg shadow-lg border border-gray-200">
+                            <div className="w-[394px] bg-white rounded-lg shadow-lg border border-gray-200">
                                 <div className="p-4">
                                     <div className="space-y-4">
                                         <div>
-                                            <h2 className="font-bold text-[#9c050c] text-lg tracking-[0] leading-[normal] mb-2  ">
+                                            <h2 className="font-bold text-myred text-lg tracking-[0] leading-[normal] mb-2  ">
                                                 Nhập thông tin tài khoản của bạn
                                             </h2>
                                             <hr className="border-t border-gray-300" />
