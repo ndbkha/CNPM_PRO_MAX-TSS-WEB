@@ -33,8 +33,9 @@ class AvailabilityOut(BaseModel):
     start_time: datetime
     end_time: datetime
     is_booked: bool
+
     class Config:
-        orm_mode = True
+        class Config: orm_mode = True
 
 class TutorSummary(BaseModel):
     id: int

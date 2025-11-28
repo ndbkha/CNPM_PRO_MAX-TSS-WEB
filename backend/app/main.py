@@ -28,29 +28,75 @@ def startup_event():
     db = SessionLocal()
 
     if db.query(models.User).count() == 0:
-        print("Seeding default users...")
+        
+        # --- 1. 3 Tài khoản Sinh viên (Students) ---
         crud.create_user(db,
-            "student1@hcmut.edu.vn",
-            "Student One",
-            "CNTT",
+            "annguyen@hcmut.edu.vn",
+            "Nguyễn Văn An",
+            "Khoa Học và Kỹ Thuật Máy Tính", # Khoa CNTT
             "student",
             get_password_hash("123456")
         )
         crud.create_user(db,
-            "tutor1@hcmut.edu.vn",
-            "Tutor One",
-            "CNTT",
+            "thipham@hcmut.edu.vn",
+            "Phạm Thị Thi",
+            "Điện - Điện Tử", # Khoa Điện
+            "student",
+            get_password_hash("123456")
+        )
+        crud.create_user(db,
+            "kienle@hcmut.edu.vn",
+            "Lê Hoàng Kiên",
+            "Kỹ Thuật Xây Dựng", # Khoa Xây Dựng
+            "student",
+            get_password_hash("123456")
+        )
+
+        # --- 2. 6 Tài khoản Tutor ---
+        crud.create_user(db,
+            "longtran@hcmut.edu.vn",
+            "Trần Minh Long",
+            "Khoa Học và Kỹ Thuật Máy Tính",
             "tutor",
             get_password_hash("123456")
         )
         crud.create_user(db,
-            "tutor2@hcmut.edu.vn",
-            "Tutor Two",
-            "Dien",
+            "haivoc@hcmut.edu.vn",
+            "Võ Hải",
+            "Công Nghệ Vật Liệu", # Khoa Vật Liệu
+            "tutor",
+            get_password_hash("123456")
+        )
+        crud.create_user(db,
+            "tuanna@hcmut.edu.vn",
+            "Nguyễn Anh Tuấn",
+            "Kỹ Thuật Hóa Học", # Khoa Hóa
+            "tutor",
+            get_password_hash("123456")
+        )
+        crud.create_user(db,
+            "minhdo@hcmut.edu.vn",
+            "Đỗ Văn Minh",
+            "Cơ Khí", # Khoa Cơ Khí
+            "tutor",
+            get_password_hash("123456")
+        )
+        crud.create_user(db,
+            "linhhoang@hcmut.edu.vn",
+            "Hoàng Thúy Linh",
+            "Quản Lý Công Nghiệp", # Khoa QLCN
+            "tutor",
+            get_password_hash("123456")
+        )
+        crud.create_user(db,
+            "huyho@hcmut.edu.vn",
+            "Hồ Quốc Huy",
+            "Kỹ Thuật Giao Thông", # Khoa Giao Thông
             "tutor",
             get_password_hash("123456")
         )
 
+       
     db.close()
 
 # ⭐⭐ PHẢI CÓ 3 include_router NÀY ⭐⭐
