@@ -1,0 +1,16 @@
+# Cập nhật các package cốt lõi
+fastapi~=0.111.0 
+uvicorn[standard]~=0.30.0
+SQLAlchemy~=2.0.30
+alembic~=1.13.1
+
+# Giữ Pydantic 2.x
+pydantic>=2.7.0
+
+# Giữ các package khác
+python-jose==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Cập nhật để tương thích với FastAPI 0.111.x
+python-multipart>=0.0.7
+email-validator==2.1.1
